@@ -18,6 +18,22 @@ $(function () {
       }
     });
   }
+
+  //this function saves the tasks to local storage, and changes the content of the time block to the inputted content
+  function loadSavedTasks() {
+    $(".time-block").each(function() {
+      var timeBlockId = $(this).attr("id");
+      var savedTask = localStorage.getItem(timeBlockId);
+
+      if (savedTask !== null) {
+        $(this).find(".description").val(savedTask);
+      }
+    });
+  }
+
+  
+
+
 });
 
 
