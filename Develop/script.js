@@ -31,9 +31,23 @@ $(function () {
     });
   }
 
-  
+  //this function displays the current date at the top of the page
+  function displayCurrentDate() {
+    var currentDate = dayjs().format("dddd, MMMM D, YYYY");
+    $("#currentDay").text(currentDate);
+  }
 
+  //adds the event listener to the save buttons
+  $(".saveBtn").on("click", function() {
+    var timeBlockId = $(this).closest(".time-block").attr("id");
+    var taskDescription = $(this).siblings(".description").val();
+    localStorage.setItem(timeBlockId, taskDescription);
+  });
 
+  //calls the functions
+  updateTimeBlocks();
+  loadSavedTasks();
+  displayCurrentDate();
 });
 
 
