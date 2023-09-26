@@ -8,3 +8,6 @@ This project helped me learn how to use APIs and also solidified my knowledge of
 
 ## Deployed Site
 
+Link: https://tchr7902.github.io/workDayScheduler/
+
+![Screenshot of deployed website](/images/deployedsitess.PNG)
